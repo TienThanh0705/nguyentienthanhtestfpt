@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&family=Tilt+Neon&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +30,7 @@ a {
 }
 
 body {
-  font-family: "Barlow", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
 }
 
@@ -80,7 +82,15 @@ html {
   font-size: 2.4rem;
   cursor: pointer;
 }
-
+.menu li a {
+  padding: 10px 25px;
+  transition: 0.2s;
+  border-radius: 50px;
+}
+.menu li a:hover {
+  background-color: black;
+  color: #fff;
+}
 /* about */
 
 .about {
@@ -110,9 +120,13 @@ html {
   letter-spacing: 20px;
   font-weight: 550;
   text-align: center;
-  background: linear-gradient(to right, #f2f2f2, #4b4646);
+  background: -webkit-linear-gradient(#fff,#ccc, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: .8;
+  /* background: linear-gradient(to right, #f2f2f2, #4b4646);
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent; */
   padding-bottom: 3rem;
 }
 
@@ -144,7 +158,7 @@ html {
 
 .about-bottom {
   position: absolute;
-  bottom: 16.4rem;
+  bottom: 9.4rem;
   width: 95rem;
   left: 50%;
   transform: translateX(-50%);
@@ -162,7 +176,7 @@ html {
 .about-bottom p {
   color: var(--four-color);
   font-size: 2.5rem;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   text-align: justify;
 }
 
@@ -301,7 +315,7 @@ html {
 .footer {
   background: url(../img/demo-image-02.jpg) no-repeat top center/ cover;
   width: 100%;
-  height: 900px;
+  height: 150vh;
   position: relative;
 }
 
@@ -370,7 +384,7 @@ html {
 
 .footer-bottom {
   position: absolute;
-  bottom: 15rem;
+  bottom: 1rem;
   color: #fff;
   left: 50%;
   transform: translatex(-50%);
@@ -445,7 +459,7 @@ html {
   }
 
   .about-top p {
-    max-width: 60%;
+    max-width: 100%;
     margin: 0 auto;
     text-align: center;
   }
@@ -501,7 +515,7 @@ html {
   }
 
   .about-bottom p {
-    max-width: 50%;
+    max-width: 85%;
     margin: 0 auto;
     text-align: center;
   }
@@ -529,7 +543,7 @@ html {
   .project-content:nth-child(2) .describe,
   .project-content:nth-child(3) .describe {
     width: 100%;
-    padding-top: 20px;
+    padding-top: 70px;
   }
 
   .project-content:nth-child(2) .describe::before,
@@ -565,18 +579,17 @@ html {
   }
 
   /* footer */
-
   .footer-content {
     top: 10rem;
   }
 }
 
 .hero {
-  height: 100%;
+  /* height: 100%; */
 }
 
 .hero-content {
-  height: 100%;
+  /* height: 100%; */
 }
 
 .hero-middle {
@@ -585,10 +598,10 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
-  padding-top: 150px;
-  height: 1100px;
-
+  height: 100vh;
+  /* height: 1600px; */
 }
 
 .hero-heading {
@@ -597,9 +610,14 @@ html {
   letter-spacing: 32px;
   font-weight: 600;
   text-align: center;
-  background: linear-gradient(to right, #f2f2f2, #4b4646);
+  
+	background: -webkit-linear-gradient(#fff,#ccc, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+   opacity: .9;
+  /* background: linear-gradient(to right, #f2f2f2, #4b4646);
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent; */
   z-index: 1;
 }
 
@@ -609,15 +627,15 @@ html {
   word-spacing: 3px;
   padding: 20px 0 60px;
   max-width: 33%;
-  color:#fff;
+  color:#b5b5b5;
   z-index: 1;
 }
 .hero-middle::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* z-index: 1; */
 }
 
 button {
@@ -626,6 +644,7 @@ button {
   color: white;
   border-radius: 6px;
   border: none;
+  z-index: 9;
 }
 
 .hero-footer h2 {
@@ -634,9 +653,9 @@ button {
 }
 
 .hero-footer {
-
- position: absolute;
- bottom: 60px;
+ background-color: black;
+ /* position: absolute; */
+ bottom: 10px;
   color: white;
   
   display: flex;
@@ -649,6 +668,7 @@ button {
 }
 
 .hero-footer p {
+  font-size: 16px;
   margin-top: 60px;
   max-width: 40%;
   word-spacing: 3px;
@@ -723,10 +743,6 @@ img {
 .mountains-img-2nd img,.mountains-img-3rd img {
   height:80%;
 }
-
-/* .mountains-content-2nd {
-  height:
-} */
 
 .mountains-content-2nd,
 .mountains-content-3rd {
@@ -868,20 +884,9 @@ input {
   background-color: rgba(255, 255, 255, 0.002);
   z-index: 1;
 }
-
-/* footer-content {
-  position: absolute;
-  top: 30.6rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-} */
-
-
 .footer-content {
   top: 10rem;
 }
-
 
 @media screen and (max-width: 428px) {
 /* about  */
@@ -916,14 +921,11 @@ input {
   padding-bottom: 120%;
 }
 
-
-
 .form-control {
   width: 100%;
   padding: 6rem 5rem;
   margin-bottom: 2rem;
 }
-
 .btn-ft {
   width: 100%;
   padding: 1rem 3rem;
@@ -937,11 +939,19 @@ input {
   align-items: stretch;
 }
 
-
-
 .footer-bottom {
   width: 100%;
   text-align: center;
   bottom: 10rem;
 }
+}
+.footer-total{
+  display: flex;
+  flex-direction: column;
+}
+.footer-background{
+  width: 100%;
+  height: 15vh;
+  background: -webkit-linear-gradient(#000, #000);
+  border: none;
 }
